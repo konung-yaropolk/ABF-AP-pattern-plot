@@ -9,7 +9,7 @@ colors = [cm(x/abf.sweepCount) for x in abf.sweepList]
 # colors.reverse()
 
 plt.figure(figsize=(8, 5))
-plt.suptitle('AP firing pattern')
+plt.title('AP firing pattern')
 for sweepNumber in abf.sweepList:
     abf.setSweep(sweepNumber)
     i1, i2 = 0, int(abf.sampleRate * 1)

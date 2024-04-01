@@ -11,18 +11,18 @@ def process_abf(path, filename):
         abf = pyabf.ABF(path + filename)
 
         # use a custom colormap to create a different color for every sweep
-        cm = plt.get_cmap('winter')
-        colors = [cm(x/abf.sweepCount) for x in abf.sweepList]
+        # cm = plt.get_cmap('winter')
+        # colors = [cm(x/abf.sweepCount) for x in abf.sweepList]
         # colors.reverse()
 
-        plt.figure(figsize=(8, 5))
-        plt.title(filename[-19:] +'\nAP firing pattern')  # Вывести только имя файла (последние 15 символов пути для типичного abf файла)
+        plt.figure(figsize=(8, 5), dpi=200)
+        plt.title(filename[-19:] +'\nAP firing pattern')       # Вывести только имя файла (последние 15 символов пути для типичного abf файла)
         for sweepNumber in abf.sweepList:
             abf.setSweep(sweepNumber, channel=0)
             i1, i2 = 0, int(abf.sampleRate * 1)
-            dataX = abf.sweepX[i1:i2] + .0 * sweepNumber  # .025
-            dataY = abf.sweepY[i1:i2] + 50 * sweepNumber  # 15
-            plt.plot(dataX, dataY, color=colors[sweepNumber], alpha=.5)
+            dataX = abf.sweepX[i1:i2] + .0 * sweepNumber       # .025  X offset
+            dataY = abf.sweepY[i1:i2] + 50 * sweepNumber       # 15    Y offset
+            plt.plot(dataX, dataY, color='black', alpha=.7)    # color=colors[sweepNumber]
 
         plt.gca().axis('off')
         plt.text(0, 0,'Step Length.: {}ms\n\nUpper Level: {}pA\nLower Level: {}pA\nDelta Level: {}pA'.format(

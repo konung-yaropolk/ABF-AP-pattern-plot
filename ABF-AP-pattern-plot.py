@@ -21,7 +21,7 @@ def process_abf(path, filename):
             abf.setSweep(sweepNumber, channel=0)
             i1, i2 = 0, int(abf.sampleRate * 1)
             dataX = abf.sweepX[i1:i2] + .0 * sweepNumber  # .025
-            dataY = abf.sweepY[i1:i2] + 15 * sweepNumber  # 15
+            dataY = abf.sweepY[i1:i2] + 50 * sweepNumber  # 15
             plt.plot(dataX, dataY, color=colors[sweepNumber], alpha=.5)
 
         plt.gca().axis('off')

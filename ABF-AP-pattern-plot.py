@@ -35,7 +35,7 @@ def process_abf(path, filename):
                         ha="right",
                         bbox=dict(fc="w", lw=1),
                     )
-        plt.savefig(path + filename + '_AP-firing.png')   
+        plt.savefig(path + filename + '_AP-firing.png', transparent=True)   
 
 
     except ValueError as e:

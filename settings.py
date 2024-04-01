@@ -3,6 +3,10 @@
 
 # Parameters:
 
+STEP_LENGTH = 500 # value in ms
+LOWER_LEVEL = -20   # value in pA
+DELTA_LEVEL = 10    # value in pA
+
 DIRECTORY = 'F:/Lab Work Files/Patch-clamp data'    # full path to directory with files, leave empty if you run this script in it
 
 FILES_LIST = [
@@ -483,23 +487,23 @@ FILES_LIST = [
 
 # # TRP project:
 
-# ['/TRP project/2024_03_11/2024_03_11_0002.abf',0],
-# ['/TRP project/2024_03_11/2024_03_11_0005.abf',0],
-# ['/TRP project/2024_03_11/2024_03_11_0007.abf',0],
+['/TRP project/2024_03_11/2024_03_11_0002.abf',0],
+['/TRP project/2024_03_11/2024_03_11_0005.abf',0],
+['/TRP project/2024_03_11/2024_03_11_0007.abf',0],
 
-# ['/TRP project/2024_03_12/2024_03_12_0000.abf',0],
-# ['/TRP project/2024_03_12/2024_03_12_0002.abf',0],
-# ['/TRP project/2024_03_12/2024_03_12_0004.abf',0],
+['/TRP project/2024_03_12/2024_03_12_0000.abf',0],
+['/TRP project/2024_03_12/2024_03_12_0002.abf',0],
+['/TRP project/2024_03_12/2024_03_12_0004.abf',0],
 
-# ['/TRP project/2024_03_24/2024_03_24_0000.abf',0],
+['/TRP project/2024_03_24/2024_03_24_0000.abf',0],
 
-# ['/TRP project/2024_03_25/2024_03_25_0008.abf',0],
-# ['/TRP project/2024_03_25/2024_03_25_0010.abf',0],
+['/TRP project/2024_03_25/2024_03_25_0008.abf',0],
+['/TRP project/2024_03_25/2024_03_25_0010.abf',0],
 
-# ['/TRP project/2024_03_26_M1/2024_03_26_0000.abf',0],
-# ['/TRP project/2024_03_26_M1/2024_03_26_0002.abf',0],
+['/TRP project/2024_03_26_M1/2024_03_26_0000.abf',0],
+['/TRP project/2024_03_26_M1/2024_03_26_0002.abf',0],
     
-# ['/TRP project/2024_03_26_M2/2024_03_26_0006.abf',0],
+['/TRP project/2024_03_26_M2/2024_03_26_0006.abf',0],
 
 
 

@@ -16,7 +16,7 @@ def process_abf(path, filename):
         # colors.reverse()
 
         plt.figure(figsize=(8, 5))
-        plt.title(filename[:-19] +'\nAP firing pattern')
+        plt.title(filename[-19:] +'\nAP firing pattern')  # Вывести только имя файла (последние 15 символов пути для типичного abf файла)
         for sweepNumber in abf.sweepList:
             abf.setSweep(sweepNumber, channel=0)
             i1, i2 = 0, int(abf.sampleRate * 1)

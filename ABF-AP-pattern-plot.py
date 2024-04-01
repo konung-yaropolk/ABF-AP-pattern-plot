@@ -8,7 +8,6 @@ def process_abf(path, filename):
     # Перехоплення помилки відсутнього файлу
     try:
         # Відкривання abf файлу
-
         abf = pyabf.ABF(path + filename)
 
         # use a custom colormap to create a different color for every sweep
@@ -26,7 +25,7 @@ def process_abf(path, filename):
             plt.plot(dataX, dataY, color=colors[sweepNumber], alpha=.5)
 
         plt.gca().axis('off')
-        plt.savefig(path, filename)   
+        plt.savefig(path + filename + '_AP-firing.png')   
 
 
     except ValueError as e:

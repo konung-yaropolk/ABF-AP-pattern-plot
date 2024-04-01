@@ -24,22 +24,7 @@ def process_abf(path, filename):
             dataY = abf.sweepY[i1:i2] + 15 * sweepNumber  # 15
             plt.plot(dataX, dataY, color=colors[sweepNumber], alpha=.5)
 
-        # plt.xlabel(s.X_AXIS_LABEL)
         plt.gca().axis('off')
-
-
-        # from matplotlib.offsetbox import AnchoredText
-
-        # at = AnchoredText("Figure 1a",
-        #                 prop=dict(size=15), frameon=True, loc='upper left')
-        # at.patch.set_boxstyle("round,pad=0.,rounding_size=0.2")
-        # plt.add_artist(at)
-
-        # plt.text(0.5, 0.5, "Direction",
-        #     ha="center", va="center", rotation=45, size=15,
-        #     bbox=dict(boxstyle="rarrow,pad=0.3",
-        #               fc="lightblue", ec="steelblue", lw=2))
-
         plt.text(0, 0,'Step Length.: {}ms\n\nUpper Level: {}pA\nLower Level: {}pA\nDelta Level: {}pA'.format(
                             s.STEP_LENGTH,
                             s.DELTA_LEVEL * abf.sweepCount,

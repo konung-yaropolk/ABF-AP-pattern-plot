@@ -7,7 +7,7 @@ STEP_LENGTH = 500 # value in ms
 LOWER_LEVEL = -20   # value in pA
 DELTA_LEVEL = 10    # value in pA
 
-DIRECTORY = 'F:/Lab Work Files/Patch-clamp data'    # full path to directory with files, leave empty if you run this script in it
+DIRECTORY = 'F:/LabWork/Patch-clamp data'    # full path to directory with files, leave empty if you run this script in it
 
 FILES_LIST = [
 
